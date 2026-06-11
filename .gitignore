@@ -1,0 +1,15 @@
+# Данные заказчика — НИКОГДА не коммитить
+inputs/
+runs/
+*.mp4
+*.jpg
+*.jpeg
+*.png
+*.xlsx
+
+# Боевой конфиг камер (имена объектов заказчика) — только cameras.example.yaml
+pipeline/config/cameras.yaml
+
+__pycache__/
+*.pyc
+.DS_Store

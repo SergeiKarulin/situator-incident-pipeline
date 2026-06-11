@@ -1,0 +1,16 @@
+# Карта камер контура: камера -> объект (площадка), человекочитаемое имя.
+# СКОПИРУЙТЕ в cameras.yaml и заполните под свой контур: cp config/cameras.example.yaml config/cameras.yaml
+# adjacency: граф «соседних камер» — межкамерная склейка сравнивает ТОЛЬКО пары из списка.
+
+cameras:
+  cam1: {object: site-a, name: "Площадка A, камера 1 (двор)"}
+  cam2: {object: site-a, name: "Площадка A, камера 2 (ворота)"}
+  cam3: {object: site-b, name: "Площадка B, камера 1 (бокс)"}
+
+adjacency:
+  - {a: cam1, b: cam2, confirmed: true, note: "двор и ворота — смежные зоны"}
+
+# Часовые пояса объектов (локальное время = UTC + offset) — для времени суток в описаниях
+timezones:
+  default: 3
+  site-b: 5

@@ -1,0 +1,10 @@
+services:
+  pipeline:
+    build: ./pipeline
+    image: situator-pipeline:latest
+    volumes:
+      - ./inputs:/data/inputs:ro
+      - ./runs:/runs
+      - ./pipeline/config:/app/config:ro
+    environment:
+      - PYTHONUNBUFFERED=1
